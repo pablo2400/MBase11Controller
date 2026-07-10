@@ -11,8 +11,6 @@ juce::Colour text() { return juce::Colour::fromRGB(235, 235, 230); }
 MBase11ControllerAudioProcessorEditor::MBase11ControllerAudioProcessorEditor(MBase11ControllerAudioProcessor& p)
     : AudioProcessorEditor(&p), processor(p)
 {
-    setSize(980, 620);
-
     titleLabel.setText("Jomox MBase 11 Controller", juce::dontSendNotification);
     titleLabel.setColour(juce::Label::textColourId, text());
     titleLabel.setFont(juce::FontOptions(24.0f, juce::Font::bold));
@@ -70,6 +68,8 @@ MBase11ControllerAudioProcessorEditor::MBase11ControllerAudioProcessorEditor(MBa
             addAndMakeVisible(control->slider);
         }
     }
+
+    setSize(980, 620);
 }
 
 MBase11ControllerAudioProcessorEditor::~MBase11ControllerAudioProcessorEditor()
