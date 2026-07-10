@@ -29,5 +29,25 @@ The binary also contains these SysEx workflow strings:
 - Transmit SysEx Patch
 - To transmit a patch from the MBase 11, press Up and Play together, navigate to `Sys Dump`, then press the encoder.
 
-Open item: verify the exact CC numbers and SysEx dump format from the manual. The implementation table is isolated in `Source/MBase11Parameters.cpp`.
+Confirmed CC mapping:
 
+| Parameter | CC | Value range |
+| --- | ---: | --- |
+| Tune | 100 | 0..127 |
+| Pitch | 101 | 0..127 |
+| Decay | 102 | 0..127 |
+| Harmonics | 103 | 0..127 |
+| Pulse | 104 | 0..127 |
+| Noise | 105 | 0..127 |
+| Attack | 106 | 0..127 |
+| EQ | 107 | 0..127 |
+| Compression | 113 | 0..127 |
+| Gate Time | 114 | 0..127 |
+| Metal Noise | 115 | 0..127 |
+| Volume | 117 | 0..127 |
+| LFO Sync | 120 | 0/64 |
+| LFO Intensity | 121 | 0..127 |
+| LFO Rate | 122 | 0..127 |
+| LFO One Shot | 123 | 0/64 |
+
+Open item: verify the SysEx dump format from the manual. The implementation table is isolated in `Source/MBase11Parameters.cpp`.

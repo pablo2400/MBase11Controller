@@ -15,8 +15,6 @@ This is an initial implementation scaffold:
 - Parameter/state persistence through `AudioProcessorValueTreeState`.
 - SysEx menu placeholders and a documented MIDI mapping table.
 
-Important: the exact MBase 11 CC/SysEx numbers still need to be verified against `MBase11_E.pdf`. The code keeps them in one place: `Source/MBase11Parameters.cpp`.
-
 ## Build
 
 Install CMake and Apple command line tools, then build:
@@ -59,9 +57,13 @@ Parameters currently present in the UI:
 - Noise
 - Metal Noise
 - Attack
+- EQ
+- Compression
 - LFO Sync
 - LFO One Shot
 - LFO Intensity
 - LFO Rate
 
 MIDI channel and direct MIDI output are global controller settings, not automatable sound parameters.
+
+The CC table lives in `Source/MBase11Parameters.cpp`. LFO toggle parameters send `0` for off and `64` for on.

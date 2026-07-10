@@ -4,23 +4,23 @@ namespace mbase11
 {
 const std::vector<ParameterSpec>& getParameterSpecs()
 {
-    // TODO: Verify exact CC numbers against the Jomox MBase 11 manual.
-    // The UI and persistence are final enough to use; the protocol table is isolated here.
     static const std::vector<ParameterSpec> specs {
-        { "volume",       "Volume",       "Level",     0.0f, 127.0f, 100.0f,  7, ParamKind::continuous },
-        { "tune",         "Tune",         "Pitch",     0.0f, 127.0f,  64.0f, 20, ParamKind::continuous },
-        { "pitch",        "Pitch",        "Pitch",     0.0f, 127.0f,  64.0f, 21, ParamKind::continuous },
-        { "decay",        "Decay",        "Envelope",  0.0f, 127.0f,  80.0f, 22, ParamKind::continuous },
-        { "gateTime",     "Gate Time",    "Envelope",  0.0f, 127.0f,  20.0f, 23, ParamKind::continuous },
-        { "harmonics",    "Harmonics",    "Tone",      0.0f, 127.0f,  30.0f, 24, ParamKind::continuous },
-        { "pulse",        "Pulse",        "Tone",      0.0f, 127.0f,  20.0f, 25, ParamKind::continuous },
-        { "noise",        "Noise",        "Tone",      0.0f, 127.0f,   0.0f, 26, ParamKind::continuous },
-        { "metalNoise",   "Metal Noise",  "Tone",      0.0f, 127.0f,   0.0f, 27, ParamKind::continuous },
-        { "attack",       "Attack",       "Envelope",  0.0f, 127.0f,   0.0f, 28, ParamKind::continuous },
-        { "lfoSync",      "LFO Sync",     "LFO",       0.0f,   1.0f,   0.0f, 29, ParamKind::toggle },
-        { "lfoOneShot",   "LFO One Shot", "LFO",       0.0f,   1.0f,   0.0f, 30, ParamKind::toggle },
-        { "lfoIntensity", "LFO Intensity", "LFO",      0.0f, 127.0f,   0.0f, 31, ParamKind::continuous },
-        { "lfoRate",      "LFO Rate",     "LFO",       0.0f, 127.0f,  64.0f, 32, ParamKind::continuous },
+        { "volume",       "Volume",        "Level",     0.0f, 127.0f, 100.0f, 117, ParamKind::continuous },
+        { "tune",         "Tune",          "Pitch",     0.0f, 127.0f,  64.0f, 100, ParamKind::continuous },
+        { "pitch",        "Pitch",         "Pitch",     0.0f, 127.0f,  64.0f, 101, ParamKind::continuous },
+        { "decay",        "Decay",         "Envelope",  0.0f, 127.0f,  80.0f, 102, ParamKind::continuous },
+        { "gateTime",     "Gate Time",     "Envelope",  0.0f, 127.0f,  20.0f, 114, ParamKind::continuous },
+        { "harmonics",    "Harmonics",     "Tone",      0.0f, 127.0f,  30.0f, 103, ParamKind::continuous },
+        { "pulse",        "Pulse",         "Tone",      0.0f, 127.0f,  20.0f, 104, ParamKind::continuous },
+        { "noise",        "Noise",         "Tone",      0.0f, 127.0f,   0.0f, 105, ParamKind::continuous },
+        { "metalNoise",   "Metal Noise",   "Tone",      0.0f, 127.0f,   0.0f, 115, ParamKind::continuous },
+        { "attack",       "Attack",        "Envelope",  0.0f, 127.0f,   0.0f, 106, ParamKind::continuous },
+        { "eq",           "EQ",            "Output",    0.0f, 127.0f,  64.0f, 107, ParamKind::continuous },
+        { "compression",  "Compression",   "Output",    0.0f, 127.0f,   0.0f, 113, ParamKind::continuous },
+        { "lfoSync",      "LFO Sync",      "LFO",       0.0f,   1.0f,   0.0f, 120, ParamKind::toggle },
+        { "lfoOneShot",   "LFO One Shot",  "LFO",       0.0f,   1.0f,   0.0f, 123, ParamKind::toggle },
+        { "lfoIntensity", "LFO Intensity", "LFO",       0.0f, 127.0f,   0.0f, 121, ParamKind::continuous },
+        { "lfoRate",      "LFO Rate",      "LFO",       0.0f, 127.0f,  64.0f, 122, ParamKind::continuous },
     };
 
     return specs;
@@ -65,9 +65,8 @@ const ParameterSpec* findSpec(juce::StringRef id)
 int normalisedToMidiValue(const ParameterSpec& spec, float plainValue)
 {
     if (spec.kind == ParamKind::toggle)
-        return plainValue >= 0.5f ? 127 : 0;
+        return plainValue >= 0.5f ? 64 : 0;
 
     return juce::jlimit(0, 127, juce::roundToInt(plainValue));
 }
 }
-

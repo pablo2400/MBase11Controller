@@ -105,13 +105,14 @@ void MBase11ControllerAudioProcessorEditor::resized()
 
     area.removeFromTop(28);
     auto row1 = area.removeFromTop(220);
-    layoutGroup("Pitch", row1.removeFromLeft(240));
-    layoutGroup("Envelope", row1.removeFromLeft(360));
-    layoutGroup("Level", row1.removeFromLeft(180));
+    layoutGroup("Pitch", row1.removeFromLeft(220));
+    layoutGroup("Envelope", row1.removeFromLeft(330));
+    layoutGroup("Level", row1.removeFromLeft(150));
+    layoutGroup("Output", row1.removeFromLeft(220));
 
     area.removeFromTop(18);
     auto row2 = area.removeFromTop(240);
-    layoutGroup("Tone", row2.removeFromLeft(520));
+    layoutGroup("Tone", row2.removeFromLeft(560));
     layoutGroup("LFO", row2.removeFromLeft(360));
 }
 
