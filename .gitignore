@@ -1,0 +1,9 @@
+build/
+build-make/
+Builds/
+cmake-build-*/
+.DS_Store
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+JuceLibraryCode/
