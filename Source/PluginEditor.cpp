@@ -36,8 +36,30 @@ MBase11ControllerAudioProcessorEditor::MBase11ControllerAudioProcessorEditor(MBa
 
     snapshotButton.addListener(this);
     sysexButton.addListener(this);
+    testNoteButton.addListener(this);
     addAndMakeVisible(snapshotButton);
     addAndMakeVisible(sysexButton);
+    addAndMakeVisible(testNoteButton);
+
+    autoTriggerToggle.setToggleState(processor.isAutoTriggerEnabled(), juce::dontSendNotification);
+    autoTriggerToggle.addListener(this);
+    autoTriggerToggle.setColour(juce::ToggleButton::tickColourId, accent());
+    addAndMakeVisible(autoTriggerToggle);
+
+    bpmLabel.setText("BPM", juce::dontSendNotification);
+    bpmLabel.setColour(juce::Label::textColourId, text().withAlpha(0.76f));
+    bpmLabel.setJustificationType(juce::Justification::centred);
+    addAndMakeVisible(bpmLabel);
+
+    bpmSlider.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
+    bpmSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 58, 22);
+    bpmSlider.setRange(20.0, 300.0, 1.0);
+    bpmSlider.setValue(processor.getAutoTriggerBpm(), juce::dontSendNotification);
+    bpmSlider.setColour(juce::Slider::rotarySliderFillColourId, accent());
+    bpmSlider.setColour(juce::Slider::rotarySliderOutlineColourId, juce::Colour::fromRGB(70, 74, 78));
+    bpmSlider.setColour(juce::Slider::textBoxTextColourId, text());
+    bpmSlider.onValueChange = [this] { processor.setAutoTriggerBpm((float) bpmSlider.getValue()); };
+    addAndMakeVisible(bpmSlider);
 
     for (const auto& spec : mbase11::getParameterSpecs())
     {
@@ -69,13 +91,15 @@ MBase11ControllerAudioProcessorEditor::MBase11ControllerAudioProcessorEditor(MBa
         }
     }
 
-    setSize(980, 620);
+    setSize(1180, 650);
 }
 
 MBase11ControllerAudioProcessorEditor::~MBase11ControllerAudioProcessorEditor()
 {
     snapshotButton.removeListener(this);
     sysexButton.removeListener(this);
+    testNoteButton.removeListener(this);
+    autoTriggerToggle.removeListener(this);
     channelBox.removeListener(this);
     midiOutputBox.removeListener(this);
 }
@@ -94,14 +118,14 @@ void MBase11ControllerAudioProcessorEditor::resized()
 {
     auto area = getLocalBounds().reduced(28);
     auto top = area.removeFromTop(42);
-    titleLabel.setBounds(top.removeFromLeft(360));
+    titleLabel.setBounds(top.removeFromLeft(350));
 
-    outputLabel.setBounds(top.removeFromLeft(130));
-    midiOutputBox.setBounds(top.removeFromLeft(230).reduced(4, 2));
-    channelLabel.setBounds(top.removeFromLeft(100));
-    channelBox.setBounds(top.removeFromLeft(76).reduced(4, 2));
-    snapshotButton.setBounds(top.removeFromLeft(128).reduced(4, 2));
-    sysexButton.setBounds(top.removeFromLeft(72).reduced(4, 2));
+    outputLabel.setBounds(top.removeFromLeft(118));
+    midiOutputBox.setBounds(top.removeFromLeft(210).reduced(4, 2));
+    channelLabel.setBounds(top.removeFromLeft(92));
+    channelBox.setBounds(top.removeFromLeft(64).reduced(4, 2));
+    snapshotButton.setBounds(top.removeFromLeft(136).reduced(4, 2));
+    sysexButton.setBounds(top.removeFromLeft(78).reduced(4, 2));
 
     area.removeFromTop(28);
     auto row1 = area.removeFromTop(220);
@@ -112,8 +136,15 @@ void MBase11ControllerAudioProcessorEditor::resized()
 
     area.removeFromTop(18);
     auto row2 = area.removeFromTop(240);
-    layoutGroup("Tone", row2.removeFromLeft(560));
-    layoutGroup("LFO", row2.removeFromLeft(360));
+    layoutGroup("Tone", row2.removeFromLeft(500));
+    layoutGroup("LFO", row2.removeFromLeft(300));
+
+    auto testArea = row2.reduced(8);
+    testNoteButton.setBounds(testArea.removeFromTop(42));
+    testArea.removeFromTop(10);
+    autoTriggerToggle.setBounds(testArea.removeFromTop(32));
+    bpmLabel.setBounds(testArea.removeFromTop(24));
+    bpmSlider.setBounds(testArea.removeFromTop(118).reduced(10, 0));
 }
 
 void MBase11ControllerAudioProcessorEditor::buttonClicked(juce::Button* button)
@@ -121,6 +152,18 @@ void MBase11ControllerAudioProcessorEditor::buttonClicked(juce::Button* button)
     if (button == &snapshotButton)
     {
         processor.sendCurrentPatchSnapshot();
+        return;
+    }
+
+    if (button == &testNoteButton)
+    {
+        processor.triggerTestNote();
+        return;
+    }
+
+    if (button == &autoTriggerToggle)
+    {
+        processor.setAutoTriggerEnabled(autoTriggerToggle.getToggleState());
         return;
     }
 

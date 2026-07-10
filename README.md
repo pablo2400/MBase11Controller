@@ -13,6 +13,7 @@ This is an initial implementation scaffold:
 - AUv3 is declared in the project formats, but a separate AUv3 artefact was not produced by the local Command Line Tools/Makefiles build. Expect to finish that path with full Xcode or a dedicated app-extension target.
 - One-window editor for the main MBase 11 controls.
 - MIDI CC output path for host MIDI out plus optional direct MIDI output device selection.
+- Test trigger panel with a manual C1 button and optional BPM-synced C1 retrigger.
 - Parameter/state persistence through `AudioProcessorValueTreeState`.
 - SysEx menu placeholders and a documented MIDI mapping table.
 
@@ -68,3 +69,5 @@ Parameters currently present in the UI:
 MIDI channel and direct MIDI output are global controller settings, not automatable sound parameters.
 
 The CC table lives in `Source/MBase11Parameters.cpp`. LFO toggle parameters send `0` for off and `64` for on.
+
+The test trigger sends MIDI note C1 (`36`) on the selected MIDI channel.

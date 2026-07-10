@@ -20,6 +20,7 @@ public:
     juce::Array<juce::MidiDeviceInfo> getAvailableOutputs() const;
 
     void sendParameter(const ParameterSpec& spec, int midiChannel, float plainValue);
+    void sendMessage(const juce::MidiMessage& message, int sampleOffset = 0);
     void drainTo(juce::MidiBuffer& output);
 
 private:

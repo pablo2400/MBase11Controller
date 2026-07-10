@@ -45,12 +45,17 @@ void MidiRouter::sendParameter(const ParameterSpec& spec, int midiChannel, float
     const auto value = normalisedToMidiValue(spec, plainValue);
     auto message = juce::MidiMessage::controllerEvent(channel, spec.midiCc, value);
 
+    sendMessage(message);
+}
+
+void MidiRouter::sendMessage(const juce::MidiMessage& message, int sampleOffset)
+{
     const juce::ScopedLock sl(lock);
 
     if (directOutput != nullptr)
         directOutput->sendMessageNow(message);
 
-    pending.add({ message, 0 });
+    pending.add({ message, juce::jmax(0, sampleOffset) });
 }
 
 void MidiRouter::drainTo(juce::MidiBuffer& output)

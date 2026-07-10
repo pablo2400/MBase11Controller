@@ -40,13 +40,27 @@ public:
     int getMidiChannel() const;
     void setMidiChannel(int newChannel);
     void sendCurrentPatchSnapshot();
+    void triggerTestNote();
+    bool isAutoTriggerEnabled() const;
+    void setAutoTriggerEnabled(bool shouldBeEnabled);
+    float getAutoTriggerBpm() const;
+    void setAutoTriggerBpm(float newBpm);
 
 private:
     void parameterChanged(const juce::String& parameterID, float newValue) override;
+    void triggerTestNoteAt(int sampleOffset);
+    void schedulePendingNoteOffs(int numSamples);
 
     juce::AudioProcessorValueTreeState parameters;
     mbase11::MidiRouter midiRouter;
     std::atomic<int> midiChannel { 1 };
+    std::atomic<bool> testNoteRequested { false };
+    std::atomic<bool> autoTriggerEnabled { false };
+    std::atomic<bool> resetAutoTriggerRequested { false };
+    std::atomic<float> autoTriggerBpm { 120.0f };
+    double currentSampleRate = 44100.0;
+    double samplesUntilNextAutoTrigger = 0.0;
+    juce::Array<int> pendingNoteOffCountdowns;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(MBase11ControllerAudioProcessor)
 };

@@ -35,11 +35,15 @@ private:
     juce::OwnedArray<Control> controls;
     juce::TextButton snapshotButton { "Send Snapshot" };
     juce::TextButton sysexButton { "SysEx" };
+    juce::TextButton testNoteButton { "Test C1" };
+    juce::ToggleButton autoTriggerToggle { "Auto" };
+    juce::Slider bpmSlider;
     juce::ComboBox channelBox;
     juce::ComboBox midiOutputBox;
     juce::Label titleLabel;
     juce::Label channelLabel;
     juce::Label outputLabel;
+    juce::Label bpmLabel;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(MBase11ControllerAudioProcessorEditor)
 };
