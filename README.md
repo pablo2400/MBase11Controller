@@ -1,6 +1,6 @@
 # MBase 11 Controller
 
-JUCE-based VST3/AU/AUv3/Standalone controller for the Jomox MBase 11 sound module.
+JUCE-based VST3/AU/AUv3/Standalone instrument-style controller for the Jomox MBase 11 sound module.
 
 The plugin exposes all main MBase 11 sound controls on one UI and sends MIDI parameter changes to the hardware. State is saved with the plugin session, and menu actions are reserved for patch/SysEx import/export.
 
@@ -9,6 +9,7 @@ The plugin exposes all main MBase 11 sound controls on one UI and sends MIDI par
 This is an initial implementation scaffold:
 
 - VST3, AU and standalone targets verified locally via JUCE/CMake.
+- The plugin is classified as a silent instrument/synth so Ableton Live can load it in the MIDI track instrument slot.
 - AUv3 is declared in the project formats, but a separate AUv3 artefact was not produced by the local Command Line Tools/Makefiles build. Expect to finish that path with full Xcode or a dedicated app-extension target.
 - One-window editor for the main MBase 11 controls.
 - MIDI CC output path for host MIDI out plus optional direct MIDI output device selection.
@@ -41,7 +42,7 @@ cmake -S . -B build -G Xcode -DMBASE11_FETCH_JUCE=OFF -DCMAKE_PREFIX_PATH=/path/
 
 ## Ableton Live Routing
 
-Use the plugin as a MIDI effect or instrument/effect with MIDI output enabled, then route the track MIDI output to the MIDI port connected to the MBase 11. The standalone build can open a physical MIDI output directly from the top bar.
+Use the plugin as an instrument on a MIDI track, then route the track MIDI output to the MIDI port connected to the MBase 11. The standalone build can open a physical MIDI output directly from the top bar.
 
 ## MIDI Mapping
 

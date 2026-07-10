@@ -3,7 +3,6 @@
 
 MBase11ControllerAudioProcessor::MBase11ControllerAudioProcessor()
     : AudioProcessor(BusesProperties()
-          .withInput("Input", juce::AudioChannelSet::stereo(), true)
           .withOutput("Output", juce::AudioChannelSet::stereo(), true)),
       parameters(*this, nullptr, "MBase11State", mbase11::createParameterLayout())
 {
@@ -22,7 +21,8 @@ void MBase11ControllerAudioProcessor::releaseResources() {}
 
 bool MBase11ControllerAudioProcessor::isBusesLayoutSupported(const BusesLayout& layouts) const
 {
-    return layouts.getMainInputChannelSet() == layouts.getMainOutputChannelSet();
+    const auto output = layouts.getMainOutputChannelSet();
+    return output == juce::AudioChannelSet::stereo() || output == juce::AudioChannelSet::mono();
 }
 
 void MBase11ControllerAudioProcessor::processBlock(juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiMessages)
@@ -87,4 +87,3 @@ juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter()
 {
     return new MBase11ControllerAudioProcessor();
 }
-

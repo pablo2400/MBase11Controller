@@ -27,10 +27,10 @@ juce_add_plugin(MBase11Controller
     PLUGIN_CODE Mb11
     FORMATS VST3 AU AUv3 Standalone
     PRODUCT_NAME "MBase 11 Controller"
-    IS_SYNTH FALSE
+    IS_SYNTH TRUE
     NEEDS_MIDI_INPUT TRUE
     NEEDS_MIDI_OUTPUT TRUE
-    IS_MIDI_EFFECT TRUE
+    IS_MIDI_EFFECT FALSE
     COPY_PLUGIN_AFTER_BUILD FALSE
 )
 
@@ -52,4 +52,3 @@ target_link_libraries(MBase11Controller PRIVATE
     juce::juce_audio_utils
     juce::juce_audio_plugin_client
 )
-
