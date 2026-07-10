@@ -52,3 +52,16 @@ target_link_libraries(MBase11Controller PRIVATE
     juce::juce_audio_utils
     juce::juce_audio_plugin_client
 )
+
+if (APPLE)
+    foreach(format_target
+            MBase11Controller_VST3
+            MBase11Controller_AU
+            MBase11Controller_Standalone)
+        if (TARGET ${format_target})
+            add_custom_command(TARGET ${format_target} POST_BUILD
+                COMMAND /usr/bin/codesign --force --deep --sign - "$<TARGET_BUNDLE_DIR:${format_target}>"
+                VERBATIM)
+        endif()
+    endforeach()
+endif()
