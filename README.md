@@ -89,3 +89,11 @@ MIDI channel and direct MIDI output are global controller settings, not automata
 The CC table lives in `Source/MBase11Parameters.cpp`. LFO toggle parameters send `0` for off and `64` for on.
 
 The test trigger sends MIDI note C1 (`36`) on the selected MIDI channel.
+
+## License
+
+Copyright (c) 2026 Pawel Lamik.
+
+The source code is available under the [PolyForm Noncommercial License 1.0.0](LICENSE). You may use, modify, and share the software for noncommercial purposes. Commercial use is not permitted without separate permission.
+
+Because commercial use is restricted, this is a source-available license rather than an OSI-approved open-source license.

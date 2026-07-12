@@ -1,11 +1,10 @@
 # MBase 11 Protocol Notes
 
-Source material available locally:
+Source material used during development:
 
-- `[local path]`
-- `[local path]`
+- Jomox MBase 11 operating manual
 
-The Windows editor binary exposes the user-facing parameter names:
+The controller exposes the following user-facing parameter names:
 
 - MIDI Channel
 - Volume
@@ -27,7 +26,7 @@ The module receives standard MIDI Program Change messages. The Max for Live cont
 
 The Program Change parameter remains continuous and modulatable while its UI formats the value as `Pr0..Pr9` or `r00..r99`. Max for Live parameter order and control-surface banks follow the two visible rows, with Program Change and MIDI Channel in a separate setup bank.
 
-The binary also contains these SysEx workflow strings:
+The SysEx workflow uses these actions:
 
 - Receive SysEx Patch
 - Transmit SysEx Patch
