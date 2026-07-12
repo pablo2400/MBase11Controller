@@ -944,27 +944,6 @@
       },
       {
         "box": {
-          "id": "programDisplay",
-          "maxclass": "message",
-          "text": "Pr0",
-          "fontsize": 10,
-          "patching_rect": [
-            780,
-            100,
-            52,
-            22
-          ],
-          "presentation": 1,
-          "presentation_rect": [
-            550,
-            44,
-            52,
-            22
-          ]
-        }
-      },
-      {
-        "box": {
           "id": "program",
           "maxclass": "live.numbox",
           "parameter_enable": 1,
@@ -1011,6 +990,51 @@
             0,
             0,
             0
+          ],
+          "bgcolor": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "activebgcolor": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bordercolor": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "focusbordercolor": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "box": {
+          "id": "programDisplay",
+          "maxclass": "message",
+          "text": "Pr0",
+          "fontsize": 10,
+          "patching_rect": [
+            780,
+            100,
+            52,
+            22
+          ],
+          "presentation": 1,
+          "presentation_rect": [
+            550,
+            44,
+            52,
+            22
           ]
         }
       },
