@@ -924,6 +924,75 @@
             16
           ]
         }
+      },
+      {
+        "box": {
+          "id": "program",
+          "maxclass": "live.numbox",
+          "minimum": 0,
+          "maximum": 109,
+          "parameter_enable": 1,
+          "varname": "program_change",
+          "patching_rect": [
+            850,
+            70,
+            52,
+            22
+          ],
+          "presentation": 1,
+          "presentation_rect": [
+            550,
+            44,
+            52,
+            22
+          ],
+          "saved_attribute_attributes": {
+            "valueof": {
+              "parameter_longname": "Program Change",
+              "parameter_shortname": "Program",
+              "parameter_mmin": 0,
+              "parameter_mmax": 109,
+              "parameter_initial": [
+                0
+              ],
+              "parameter_type": 1
+            }
+          }
+        }
+      },
+      {
+        "box": {
+          "id": "programLabel",
+          "maxclass": "comment",
+          "text": "PROGRAM",
+          "fontsize": 9,
+          "patching_rect": [
+            850,
+            54,
+            52,
+            16
+          ],
+          "presentation": 1,
+          "presentation_rect": [
+            550,
+            28,
+            52,
+            16
+          ]
+        }
+      },
+      {
+        "box": {
+          "id": "pgmout",
+          "maxclass": "newobj",
+          "text": "pgmout 11",
+          "patching_rect": [
+            850,
+            520,
+            72,
+            22
+          ]
+        }
       }
     ],
     "lines": [
@@ -1543,6 +1612,42 @@
         "patchline": {
           "source": [
             "cc15",
+            0
+          ],
+          "destination": [
+            "midiout",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "program",
+            0
+          ],
+          "destination": [
+            "pgmout",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "channel",
+            0
+          ],
+          "destination": [
+            "pgmout",
+            1
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "pgmout",
             0
           ],
           "destination": [

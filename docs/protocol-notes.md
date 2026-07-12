@@ -23,6 +23,8 @@ The Windows editor binary exposes the user-facing parameter names:
 - LFO Intensity
 - LFO Rate
 
+The module receives standard MIDI Program Change messages. The Max for Live control exposes `0..109`, matching the 10 user presets (`Pr0..Pr9`) followed by the 100 flash presets (`r00..r99`). Program Change is sent on the selected MIDI channel and is not a CC message.
+
 The binary also contains these SysEx workflow strings:
 
 - Receive SysEx Patch
