@@ -12,7 +12,7 @@
     "rect": [
       100,
       100,
-      620,
+      680,
       176
     ],
     "bglocked": 0,
@@ -28,7 +28,7 @@
     "toolbarvisible": 1,
     "enablehscroll": 0,
     "enablevscroll": 0,
-    "devicewidth": 620,
+    "devicewidth": 680,
     "boxes": [
       {
         "box": {
@@ -1172,6 +1172,237 @@
             22
           ]
         }
+      },
+      {
+        "box": {
+          "id": "randomizeButton",
+          "maxclass": "live.text",
+          "text": "RANDOM",
+          "texton": "RANDOM",
+          "mode": 0,
+          "parameter_enable": 0,
+          "patching_rect": [
+            610,
+            36,
+            62,
+            24
+          ],
+          "presentation": 1,
+          "presentation_rect": [
+            610,
+            36,
+            62,
+            24
+          ]
+        }
+      },
+      {
+        "box": {
+          "id": "randomizePress",
+          "maxclass": "newobj",
+          "text": "sel 1",
+          "patching_rect": [
+            610,
+            210,
+            38,
+            22
+          ]
+        }
+      },
+      {
+        "box": {
+          "id": "random0",
+          "maxclass": "newobj",
+          "text": "random 128",
+          "patching_rect": [
+            610,
+            250,
+            72,
+            22
+          ]
+        }
+      },
+      {
+        "box": {
+          "id": "random1",
+          "maxclass": "newobj",
+          "text": "random 128",
+          "patching_rect": [
+            610,
+            274,
+            72,
+            22
+          ]
+        }
+      },
+      {
+        "box": {
+          "id": "random3",
+          "maxclass": "newobj",
+          "text": "random 128",
+          "patching_rect": [
+            610,
+            322,
+            72,
+            22
+          ]
+        }
+      },
+      {
+        "box": {
+          "id": "random4",
+          "maxclass": "newobj",
+          "text": "random 128",
+          "patching_rect": [
+            610,
+            346,
+            72,
+            22
+          ]
+        }
+      },
+      {
+        "box": {
+          "id": "random5",
+          "maxclass": "newobj",
+          "text": "random 128",
+          "patching_rect": [
+            610,
+            370,
+            72,
+            22
+          ]
+        }
+      },
+      {
+        "box": {
+          "id": "random6",
+          "maxclass": "newobj",
+          "text": "random 128",
+          "patching_rect": [
+            610,
+            394,
+            72,
+            22
+          ]
+        }
+      },
+      {
+        "box": {
+          "id": "random7",
+          "maxclass": "newobj",
+          "text": "random 128",
+          "patching_rect": [
+            610,
+            418,
+            72,
+            22
+          ]
+        }
+      },
+      {
+        "box": {
+          "id": "random8",
+          "maxclass": "newobj",
+          "text": "random 128",
+          "patching_rect": [
+            610,
+            442,
+            72,
+            22
+          ]
+        }
+      },
+      {
+        "box": {
+          "id": "random9",
+          "maxclass": "newobj",
+          "text": "random 128",
+          "patching_rect": [
+            610,
+            466,
+            72,
+            22
+          ]
+        }
+      },
+      {
+        "box": {
+          "id": "random10",
+          "maxclass": "newobj",
+          "text": "random 128",
+          "patching_rect": [
+            610,
+            490,
+            72,
+            22
+          ]
+        }
+      },
+      {
+        "box": {
+          "id": "random11",
+          "maxclass": "newobj",
+          "text": "random 128",
+          "patching_rect": [
+            610,
+            514,
+            72,
+            22
+          ]
+        }
+      },
+      {
+        "box": {
+          "id": "random12",
+          "maxclass": "newobj",
+          "text": "random 128",
+          "patching_rect": [
+            610,
+            538,
+            72,
+            22
+          ]
+        }
+      },
+      {
+        "box": {
+          "id": "random13",
+          "maxclass": "newobj",
+          "text": "random 128",
+          "patching_rect": [
+            610,
+            562,
+            72,
+            22
+          ]
+        }
+      },
+      {
+        "box": {
+          "id": "random14",
+          "maxclass": "newobj",
+          "text": "random 2",
+          "patching_rect": [
+            610,
+            586,
+            62,
+            22
+          ]
+        }
+      },
+      {
+        "box": {
+          "id": "random15",
+          "maxclass": "newobj",
+          "text": "random 2",
+          "patching_rect": [
+            610,
+            610,
+            62,
+            22
+          ]
+        }
       }
     ],
     "lines": [
@@ -2000,6 +2231,378 @@
           "destination": [
             "programGate",
             1
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "randomizeButton",
+            0
+          ],
+          "destination": [
+            "randomizePress",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "randomizePress",
+            0
+          ],
+          "destination": [
+            "random0",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "random0",
+            0
+          ],
+          "destination": [
+            "param0",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "randomizePress",
+            0
+          ],
+          "destination": [
+            "random1",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "random1",
+            0
+          ],
+          "destination": [
+            "param1",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "randomizePress",
+            0
+          ],
+          "destination": [
+            "random3",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "random3",
+            0
+          ],
+          "destination": [
+            "param3",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "randomizePress",
+            0
+          ],
+          "destination": [
+            "random4",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "random4",
+            0
+          ],
+          "destination": [
+            "param4",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "randomizePress",
+            0
+          ],
+          "destination": [
+            "random5",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "random5",
+            0
+          ],
+          "destination": [
+            "param5",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "randomizePress",
+            0
+          ],
+          "destination": [
+            "random6",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "random6",
+            0
+          ],
+          "destination": [
+            "param6",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "randomizePress",
+            0
+          ],
+          "destination": [
+            "random7",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "random7",
+            0
+          ],
+          "destination": [
+            "param7",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "randomizePress",
+            0
+          ],
+          "destination": [
+            "random8",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "random8",
+            0
+          ],
+          "destination": [
+            "param8",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "randomizePress",
+            0
+          ],
+          "destination": [
+            "random9",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "random9",
+            0
+          ],
+          "destination": [
+            "param9",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "randomizePress",
+            0
+          ],
+          "destination": [
+            "random10",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "random10",
+            0
+          ],
+          "destination": [
+            "param10",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "randomizePress",
+            0
+          ],
+          "destination": [
+            "random11",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "random11",
+            0
+          ],
+          "destination": [
+            "param11",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "randomizePress",
+            0
+          ],
+          "destination": [
+            "random12",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "random12",
+            0
+          ],
+          "destination": [
+            "param12",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "randomizePress",
+            0
+          ],
+          "destination": [
+            "random13",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "random13",
+            0
+          ],
+          "destination": [
+            "param13",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "randomizePress",
+            0
+          ],
+          "destination": [
+            "random14",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "random14",
+            0
+          ],
+          "destination": [
+            "param14",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "randomizePress",
+            0
+          ],
+          "destination": [
+            "random15",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "random15",
+            0
+          ],
+          "destination": [
+            "param15",
+            0
           ]
         }
       }
