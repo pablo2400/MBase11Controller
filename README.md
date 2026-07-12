@@ -59,7 +59,7 @@ The standalone build continues to open a physical MIDI output directly from its 
 
 ### Randomize and presets
 
-`RANDOM` changes every sound parameter except Pitch. Program Change and MIDI Channel are global routing/preset controls and are not randomized.
+`RANDOMIZE` changes every sound parameter except Pitch and Volume. Program Change and MIDI Channel are global routing/preset controls and are not randomized.
 
 To save a snapshot in Ableton Live, use the save button in the device title bar and name the resulting device preset. Live stores it as an `.adv` preset in the User Library under the Max MIDI Effect presets. Loading that preset restores the controller parameters and sends their CC values to the MBase 11. This uses Live's native Browser preset workflow rather than a separate snapshot format.
 

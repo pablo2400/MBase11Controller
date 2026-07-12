@@ -1177,43 +1177,30 @@
         "box": {
           "id": "randomizeButton",
           "maxclass": "live.text",
-          "text": "RANDOM",
-          "texton": "RANDOM",
+          "text": "RANDOMIZE",
+          "texton": "RANDOMIZE",
           "mode": 0,
           "parameter_enable": 0,
           "patching_rect": [
-            610,
+            606,
             36,
-            62,
+            70,
             24
           ],
           "presentation": 1,
           "presentation_rect": [
-            610,
+            606,
             36,
-            62,
+            70,
             24
           ],
           "active": 1,
-          "appearance": 1,
+          "appearance": 0,
           "numinlets": 1,
           "numoutlets": 2,
           "outlettype": [
             "",
             ""
-          ]
-        }
-      },
-      {
-        "box": {
-          "id": "random0",
-          "maxclass": "newobj",
-          "text": "random 128",
-          "patching_rect": [
-            610,
-            250,
-            72,
-            22
           ]
         }
       },
@@ -2232,18 +2219,6 @@
       {
         "patchline": {
           "source": [
-            "random0",
-            0
-          ],
-          "destination": [
-            "param0",
-            0
-          ]
-        }
-      },
-      {
-        "patchline": {
-          "source": [
             "random1",
             0
           ],
@@ -2405,18 +2380,6 @@
           ],
           "destination": [
             "param15",
-            0
-          ]
-        }
-      },
-      {
-        "patchline": {
-          "source": [
-            "randomizeButton",
-            0
-          ],
-          "destination": [
-            "random0",
             0
           ]
         }
