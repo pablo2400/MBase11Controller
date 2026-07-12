@@ -976,7 +976,9 @@
               "parameter_unitstyle": 0
             }
           },
-          "parameter_mappable": 1
+          "parameter_mappable": 1,
+          "showname": 0,
+          "shownumber": 0
         }
       },
       {
@@ -1000,27 +1002,6 @@
           ],
           "ignoreclick": 1,
           "textjustification": 1
-        }
-      },
-      {
-        "box": {
-          "id": "programLabel",
-          "maxclass": "comment",
-          "text": "PROGRAM",
-          "fontsize": 9,
-          "patching_rect": [
-            850,
-            54,
-            52,
-            16
-          ],
-          "presentation": 1,
-          "presentation_rect": [
-            550,
-            10,
-            52,
-            16
-          ]
         }
       },
       {
