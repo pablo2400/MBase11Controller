@@ -12,8 +12,8 @@
     "rect": [
       100,
       100,
-      930,
-      180
+      620,
+      176
     ],
     "bglocked": 0,
     "openinpresentation": 1,
@@ -28,7 +28,7 @@
     "toolbarvisible": 1,
     "enablehscroll": 0,
     "enablevscroll": 0,
-    "devicewidth": 930,
+    "devicewidth": 620,
     "boxes": [
       {
         "box": {
@@ -68,10 +68,10 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            850,
-            116,
-            54,
-            24
+            550,
+            118,
+            52,
+            22
           ],
           "minimum": 1,
           "maximum": 16,
@@ -116,10 +116,10 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            16,
-            28,
-            52,
-            52
+            210,
+            104,
+            44,
+            44
           ],
           "parameter_enable": 1,
           "varname": "volume",
@@ -162,10 +162,10 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            118,
+            12,
             28,
-            52,
-            52
+            44,
+            44
           ],
           "parameter_enable": 1,
           "varname": "tune",
@@ -208,10 +208,10 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            220,
+            78,
             28,
-            52,
-            52
+            44,
+            44
           ],
           "parameter_enable": 1,
           "varname": "pitch",
@@ -254,10 +254,10 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            322,
+            144,
             28,
-            52,
-            52
+            44,
+            44
           ],
           "parameter_enable": 1,
           "varname": "decay",
@@ -300,10 +300,10 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            424,
-            28,
-            52,
-            52
+            78,
+            104,
+            44,
+            44
           ],
           "parameter_enable": 1,
           "varname": "gate_time",
@@ -346,10 +346,10 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            526,
+            408,
             28,
-            52,
-            52
+            44,
+            44
           ],
           "parameter_enable": 1,
           "varname": "attack",
@@ -392,10 +392,10 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            628,
+            210,
             28,
-            52,
-            52
+            44,
+            44
           ],
           "parameter_enable": 1,
           "varname": "harmonics",
@@ -438,10 +438,10 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            730,
+            276,
             28,
-            52,
-            52
+            44,
+            44
           ],
           "parameter_enable": 1,
           "varname": "pulse",
@@ -484,10 +484,10 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            16,
-            108,
-            52,
-            52
+            342,
+            28,
+            44,
+            44
           ],
           "parameter_enable": 1,
           "varname": "noise",
@@ -530,10 +530,10 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            118,
-            108,
-            52,
-            52
+            144,
+            104,
+            44,
+            44
           ],
           "parameter_enable": 1,
           "varname": "metal_noise",
@@ -576,10 +576,10 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            220,
-            108,
-            52,
-            52
+            474,
+            28,
+            44,
+            44
           ],
           "parameter_enable": 1,
           "varname": "eq",
@@ -622,10 +622,10 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            322,
-            108,
-            52,
-            52
+            12,
+            104,
+            44,
+            44
           ],
           "parameter_enable": 1,
           "varname": "compression",
@@ -668,10 +668,10 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            424,
-            108,
-            52,
-            52
+            408,
+            104,
+            44,
+            44
           ],
           "parameter_enable": 1,
           "varname": "lfo_intensity",
@@ -714,10 +714,10 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            526,
-            108,
-            52,
-            52
+            474,
+            104,
+            44,
+            44
           ],
           "parameter_enable": 1,
           "varname": "lfo_rate",
@@ -760,8 +760,8 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            642,
-            122,
+            286,
+            116,
             24,
             24
           ],
@@ -817,8 +817,8 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            744,
-            122,
+            352,
+            116,
             24,
             24
           ],
@@ -860,6 +860,69 @@
             22
           ],
           "text": "ctlout 123 11"
+        }
+      },
+      {
+        "box": {
+          "id": "toggleLabel14",
+          "maxclass": "comment",
+          "text": "LFO SYNC",
+          "fontsize": 9,
+          "patching_rect": [
+            276,
+            94,
+            62,
+            16
+          ],
+          "presentation": 1,
+          "presentation_rect": [
+            276,
+            94,
+            62,
+            16
+          ]
+        }
+      },
+      {
+        "box": {
+          "id": "toggleLabel15",
+          "maxclass": "comment",
+          "text": "ONE SHOT",
+          "fontsize": 9,
+          "patching_rect": [
+            342,
+            94,
+            62,
+            16
+          ],
+          "presentation": 1,
+          "presentation_rect": [
+            342,
+            94,
+            62,
+            16
+          ]
+        }
+      },
+      {
+        "box": {
+          "id": "midiChannelLabel",
+          "maxclass": "comment",
+          "text": "MIDI CH",
+          "fontsize": 9,
+          "patching_rect": [
+            550,
+            102,
+            52,
+            16
+          ],
+          "presentation": 1,
+          "presentation_rect": [
+            550,
+            102,
+            52,
+            16
+          ]
         }
       }
     ],
