@@ -86,7 +86,8 @@
               "parameter_initial": [
                 11
               ],
-              "parameter_type": 1
+              "parameter_type": 1,
+              "parameter_order": 17
             }
           }
         }
@@ -132,7 +133,8 @@
               "parameter_initial": [
                 100
               ],
-              "parameter_type": 1
+              "parameter_type": 1,
+              "parameter_order": 11
             }
           }
         }
@@ -178,7 +180,8 @@
               "parameter_initial": [
                 64
               ],
-              "parameter_type": 1
+              "parameter_type": 1,
+              "parameter_order": 0
             }
           }
         }
@@ -224,7 +227,8 @@
               "parameter_initial": [
                 64
               ],
-              "parameter_type": 1
+              "parameter_type": 1,
+              "parameter_order": 1
             }
           }
         }
@@ -270,7 +274,8 @@
               "parameter_initial": [
                 80
               ],
-              "parameter_type": 1
+              "parameter_type": 1,
+              "parameter_order": 2
             }
           }
         }
@@ -316,7 +321,8 @@
               "parameter_initial": [
                 20
               ],
-              "parameter_type": 1
+              "parameter_type": 1,
+              "parameter_order": 9
             }
           }
         }
@@ -362,7 +368,8 @@
               "parameter_initial": [
                 0
               ],
-              "parameter_type": 1
+              "parameter_type": 1,
+              "parameter_order": 6
             }
           }
         }
@@ -408,7 +415,8 @@
               "parameter_initial": [
                 30
               ],
-              "parameter_type": 1
+              "parameter_type": 1,
+              "parameter_order": 3
             }
           }
         }
@@ -454,7 +462,8 @@
               "parameter_initial": [
                 20
               ],
-              "parameter_type": 1
+              "parameter_type": 1,
+              "parameter_order": 4
             }
           }
         }
@@ -500,7 +509,8 @@
               "parameter_initial": [
                 0
               ],
-              "parameter_type": 1
+              "parameter_type": 1,
+              "parameter_order": 5
             }
           }
         }
@@ -546,7 +556,8 @@
               "parameter_initial": [
                 0
               ],
-              "parameter_type": 1
+              "parameter_type": 1,
+              "parameter_order": 10
             }
           }
         }
@@ -592,7 +603,8 @@
               "parameter_initial": [
                 64
               ],
-              "parameter_type": 1
+              "parameter_type": 1,
+              "parameter_order": 7
             }
           }
         }
@@ -638,7 +650,8 @@
               "parameter_initial": [
                 0
               ],
-              "parameter_type": 1
+              "parameter_type": 1,
+              "parameter_order": 8
             }
           }
         }
@@ -684,7 +697,8 @@
               "parameter_initial": [
                 0
               ],
-              "parameter_type": 1
+              "parameter_type": 1,
+              "parameter_order": 14
             }
           }
         }
@@ -730,7 +744,8 @@
               "parameter_initial": [
                 64
               ],
-              "parameter_type": 1
+              "parameter_type": 1,
+              "parameter_order": 15
             }
           }
         }
@@ -774,7 +789,8 @@
               "parameter_initial": [
                 0
               ],
-              "parameter_type": 2
+              "parameter_type": 2,
+              "parameter_order": 12
             }
           }
         }
@@ -831,7 +847,8 @@
               "parameter_initial": [
                 0
               ],
-              "parameter_type": 2
+              "parameter_type": 2,
+              "parameter_order": 13
             }
           }
         }
@@ -927,8 +944,29 @@
       },
       {
         "box": {
+          "id": "programDisplay",
+          "maxclass": "message",
+          "text": "Pr0",
+          "fontsize": 10,
+          "patching_rect": [
+            780,
+            100,
+            52,
+            22
+          ],
+          "presentation": 1,
+          "presentation_rect": [
+            550,
+            44,
+            52,
+            22
+          ]
+        }
+      },
+      {
+        "box": {
           "id": "program",
-          "maxclass": "live.menu",
+          "maxclass": "live.numbox",
           "parameter_enable": 1,
           "varname": "program_change",
           "patching_rect": [
@@ -948,125 +986,32 @@
             "valueof": {
               "parameter_longname": "Program Change",
               "parameter_shortname": "Program",
-              "parameter_enum": [
-                "Pr0",
-                "Pr1",
-                "Pr2",
-                "Pr3",
-                "Pr4",
-                "Pr5",
-                "Pr6",
-                "Pr7",
-                "Pr8",
-                "Pr9",
-                "r00",
-                "r01",
-                "r02",
-                "r03",
-                "r04",
-                "r05",
-                "r06",
-                "r07",
-                "r08",
-                "r09",
-                "r10",
-                "r11",
-                "r12",
-                "r13",
-                "r14",
-                "r15",
-                "r16",
-                "r17",
-                "r18",
-                "r19",
-                "r20",
-                "r21",
-                "r22",
-                "r23",
-                "r24",
-                "r25",
-                "r26",
-                "r27",
-                "r28",
-                "r29",
-                "r30",
-                "r31",
-                "r32",
-                "r33",
-                "r34",
-                "r35",
-                "r36",
-                "r37",
-                "r38",
-                "r39",
-                "r40",
-                "r41",
-                "r42",
-                "r43",
-                "r44",
-                "r45",
-                "r46",
-                "r47",
-                "r48",
-                "r49",
-                "r50",
-                "r51",
-                "r52",
-                "r53",
-                "r54",
-                "r55",
-                "r56",
-                "r57",
-                "r58",
-                "r59",
-                "r60",
-                "r61",
-                "r62",
-                "r63",
-                "r64",
-                "r65",
-                "r66",
-                "r67",
-                "r68",
-                "r69",
-                "r70",
-                "r71",
-                "r72",
-                "r73",
-                "r74",
-                "r75",
-                "r76",
-                "r77",
-                "r78",
-                "r79",
-                "r80",
-                "r81",
-                "r82",
-                "r83",
-                "r84",
-                "r85",
-                "r86",
-                "r87",
-                "r88",
-                "r89",
-                "r90",
-                "r91",
-                "r92",
-                "r93",
-                "r94",
-                "r95",
-                "r96",
-                "r97",
-                "r98",
-                "r99"
-              ],
+              "parameter_mmin": 0,
+              "parameter_mmax": 109,
               "parameter_initial": [
                 0
               ],
-              "parameter_type": 2
+              "parameter_initial_enable": 1,
+              "parameter_order": 16,
+              "parameter_type": 0,
+              "parameter_unitstyle": 0
             }
           },
-          "parameter_mappable": 1
+          "parameter_mappable": 1,
+          "minimum": 0,
+          "maximum": 109,
+          "textcolor": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "activetextcolor": [
+            0,
+            0,
+            0,
+            0
+          ]
         }
       },
       {
@@ -1099,6 +1044,162 @@
             850,
             520,
             72,
+            22
+          ]
+        }
+      },
+      {
+        "box": {
+          "id": "programTrigger",
+          "maxclass": "newobj",
+          "text": "t i i",
+          "patching_rect": [
+            780,
+            150,
+            38,
+            22
+          ]
+        }
+      },
+      {
+        "box": {
+          "id": "programIsUser",
+          "maxclass": "newobj",
+          "text": "< 10",
+          "patching_rect": [
+            830,
+            150,
+            38,
+            22
+          ]
+        }
+      },
+      {
+        "box": {
+          "id": "programGateSelector",
+          "maxclass": "newobj",
+          "text": "+ 1",
+          "patching_rect": [
+            830,
+            185,
+            34,
+            22
+          ]
+        }
+      },
+      {
+        "box": {
+          "id": "programGate",
+          "maxclass": "newobj",
+          "text": "gate 2",
+          "patching_rect": [
+            780,
+            220,
+            45,
+            22
+          ]
+        }
+      },
+      {
+        "box": {
+          "id": "programFactoryOffset",
+          "maxclass": "newobj",
+          "text": "- 10",
+          "patching_rect": [
+            750,
+            255,
+            38,
+            22
+          ]
+        }
+      },
+      {
+        "box": {
+          "id": "programFactoryFormat",
+          "maxclass": "newobj",
+          "text": "sprintf r%02ld",
+          "patching_rect": [
+            710,
+            290,
+            92,
+            22
+          ]
+        }
+      },
+      {
+        "box": {
+          "id": "programUserFormat",
+          "maxclass": "newobj",
+          "text": "sprintf Pr%ld",
+          "patching_rect": [
+            820,
+            255,
+            86,
+            22
+          ]
+        }
+      },
+      {
+        "box": {
+          "id": "programDisplaySet",
+          "maxclass": "newobj",
+          "text": "prepend set",
+          "patching_rect": [
+            780,
+            325,
+            75,
+            22
+          ]
+        }
+      },
+      {
+        "box": {
+          "id": "liveBanks",
+          "maxclass": "newobj",
+          "text": "live.banks",
+          "patching_rect": [
+            650,
+            520,
+            68,
+            22
+          ]
+        }
+      },
+      {
+        "box": {
+          "id": "bank1",
+          "maxclass": "newobj",
+          "text": "loadmess new 0 Main Tune Pitch Decay Harmonics Pulse Noise Attack EQ",
+          "patching_rect": [
+            20,
+            560,
+            430,
+            22
+          ]
+        }
+      },
+      {
+        "box": {
+          "id": "bank2",
+          "maxclass": "newobj",
+          "text": "loadmess new 1 More Compression Gate\\ Time Metal\\ Noise Volume LFO\\ Sync LFO\\ One\\ Shot LFO\\ Intensity LFO\\ Rate",
+          "patching_rect": [
+            20,
+            590,
+            680,
+            22
+          ]
+        }
+      },
+      {
+        "box": {
+          "id": "bank3",
+          "maxclass": "newobj",
+          "text": "loadmess new 2 Setup Program\\ Change MIDI\\ Channel - - - - - -",
+          "patching_rect": [
+            20,
+            620,
+            420,
             22
           ]
         }
@@ -1761,6 +1862,174 @@
           ],
           "destination": [
             "midiout",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "program",
+            0
+          ],
+          "destination": [
+            "programTrigger",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "programTrigger",
+            1
+          ],
+          "destination": [
+            "programIsUser",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "programIsUser",
+            0
+          ],
+          "destination": [
+            "programGateSelector",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "programGateSelector",
+            0
+          ],
+          "destination": [
+            "programGate",
+            1
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "programTrigger",
+            0
+          ],
+          "destination": [
+            "programGate",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "programGate",
+            0
+          ],
+          "destination": [
+            "programFactoryOffset",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "programFactoryOffset",
+            0
+          ],
+          "destination": [
+            "programFactoryFormat",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "programGate",
+            1
+          ],
+          "destination": [
+            "programUserFormat",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "programFactoryFormat",
+            0
+          ],
+          "destination": [
+            "programDisplaySet",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "programUserFormat",
+            0
+          ],
+          "destination": [
+            "programDisplaySet",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "programDisplaySet",
+            0
+          ],
+          "destination": [
+            "programDisplay",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "bank1",
+            0
+          ],
+          "destination": [
+            "liveBanks",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "bank2",
+            0
+          ],
+          "destination": [
+            "liveBanks",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "bank3",
+            0
+          ],
+          "destination": [
+            "liveBanks",
             0
           ]
         }

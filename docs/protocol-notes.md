@@ -25,6 +25,8 @@ The Windows editor binary exposes the user-facing parameter names:
 
 The module receives standard MIDI Program Change messages. The Max for Live control exposes `0..109`, matching the 10 user presets (`Pr0..Pr9`) followed by the 100 flash presets (`r00..r99`). Program Change is sent on the selected MIDI channel and is not a CC message.
 
+The Program Change parameter remains continuous and modulatable while its UI formats the value as `Pr0..Pr9` or `r00..r99`. Max for Live parameter order and control-surface banks follow the two visible rows, with Program Change and MIDI Channel in a separate setup bank.
+
 The binary also contains these SysEx workflow strings:
 
 - Receive SysEx Patch
