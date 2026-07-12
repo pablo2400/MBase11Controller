@@ -4,6 +4,9 @@ MIDI controller for the Jomox MBase 11 sound module, provided as a Max for Live 
 
 The plugin exposes all main MBase 11 sound controls on one UI and sends MIDI parameter changes to the hardware. State is saved with the plugin session, and menu actions are reserved for patch/SysEx import/export.
 
+<img width="696" height="195" alt="Zrzut ekranu 2026-07-12 o 17 57 06" src="https://github.com/user-attachments/assets/8a945cd1-cac4-4612-bc6f-852525a8c271" />
+
+
 ## Status
 
 Current implementation:
