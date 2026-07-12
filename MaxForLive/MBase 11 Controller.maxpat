@@ -12,8 +12,8 @@
     "rect": [
       100,
       100,
-      940,
-      500
+      930,
+      180
     ],
     "bglocked": 0,
     "openinpresentation": 1,
@@ -58,48 +58,6 @@
       },
       {
         "box": {
-          "id": "title",
-          "maxclass": "comment",
-          "patching_rect": [
-            20,
-            14,
-            350,
-            24
-          ],
-          "text": "MBASE 11  |  MIDI CC CONTROLLER",
-          "presentation": 1,
-          "presentation_rect": [
-            20,
-            14,
-            350,
-            24
-          ],
-          "fontface": 1,
-          "fontsize": 16
-        }
-      },
-      {
-        "box": {
-          "id": "channelLabel",
-          "maxclass": "comment",
-          "patching_rect": [
-            760,
-            15,
-            95,
-            20
-          ],
-          "text": "MIDI CHANNEL",
-          "presentation": 1,
-          "presentation_rect": [
-            760,
-            15,
-            95,
-            20
-          ]
-        }
-      },
-      {
-        "box": {
           "id": "channel",
           "maxclass": "live.numbox",
           "patching_rect": [
@@ -110,8 +68,8 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            855,
-            12,
+            850,
+            116,
             54,
             24
           ],
@@ -148,152 +106,6 @@
       },
       {
         "box": {
-          "id": "grp0",
-          "maxclass": "comment",
-          "patching_rect": [
-            20,
-            55,
-            130,
-            20
-          ],
-          "text": "PITCH",
-          "presentation": 1,
-          "presentation_rect": [
-            20,
-            55,
-            130,
-            20
-          ],
-          "fontface": 1
-        }
-      },
-      {
-        "box": {
-          "id": "grp1",
-          "maxclass": "comment",
-          "patching_rect": [
-            205,
-            55,
-            130,
-            20
-          ],
-          "text": "ENVELOPE",
-          "presentation": 1,
-          "presentation_rect": [
-            205,
-            55,
-            130,
-            20
-          ],
-          "fontface": 1
-        }
-      },
-      {
-        "box": {
-          "id": "grp2",
-          "maxclass": "comment",
-          "patching_rect": [
-            475,
-            55,
-            130,
-            20
-          ],
-          "text": "LEVEL",
-          "presentation": 1,
-          "presentation_rect": [
-            475,
-            55,
-            130,
-            20
-          ],
-          "fontface": 1
-        }
-      },
-      {
-        "box": {
-          "id": "grp3",
-          "maxclass": "comment",
-          "patching_rect": [
-            565,
-            55,
-            130,
-            20
-          ],
-          "text": "OUTPUT",
-          "presentation": 1,
-          "presentation_rect": [
-            565,
-            55,
-            130,
-            20
-          ],
-          "fontface": 1
-        }
-      },
-      {
-        "box": {
-          "id": "grp4",
-          "maxclass": "comment",
-          "patching_rect": [
-            20,
-            275,
-            130,
-            20
-          ],
-          "text": "TONE",
-          "presentation": 1,
-          "presentation_rect": [
-            20,
-            275,
-            130,
-            20
-          ],
-          "fontface": 1
-        }
-      },
-      {
-        "box": {
-          "id": "grp5",
-          "maxclass": "comment",
-          "patching_rect": [
-            475,
-            275,
-            130,
-            20
-          ],
-          "text": "LFO",
-          "presentation": 1,
-          "presentation_rect": [
-            475,
-            275,
-            130,
-            20
-          ],
-          "fontface": 1
-        }
-      },
-      {
-        "box": {
-          "id": "label0",
-          "maxclass": "comment",
-          "patching_rect": [
-            475,
-            145,
-            80,
-            30
-          ],
-          "text": "Volume",
-          "presentation": 1,
-          "presentation_rect": [
-            475,
-            145,
-            80,
-            30
-          ]
-        }
-      },
-      {
-        "box": {
           "id": "param0",
           "maxclass": "live.dial",
           "patching_rect": [
@@ -304,8 +116,8 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            475,
-            85,
+            16,
+            28,
             52,
             52
           ],
@@ -340,26 +152,6 @@
       },
       {
         "box": {
-          "id": "label1",
-          "maxclass": "comment",
-          "patching_rect": [
-            20,
-            145,
-            80,
-            30
-          ],
-          "text": "Tune",
-          "presentation": 1,
-          "presentation_rect": [
-            20,
-            145,
-            80,
-            30
-          ]
-        }
-      },
-      {
-        "box": {
           "id": "param1",
           "maxclass": "live.dial",
           "patching_rect": [
@@ -370,8 +162,8 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            20,
-            85,
+            118,
+            28,
             52,
             52
           ],
@@ -406,26 +198,6 @@
       },
       {
         "box": {
-          "id": "label2",
-          "maxclass": "comment",
-          "patching_rect": [
-            105,
-            145,
-            80,
-            30
-          ],
-          "text": "Pitch",
-          "presentation": 1,
-          "presentation_rect": [
-            105,
-            145,
-            80,
-            30
-          ]
-        }
-      },
-      {
-        "box": {
           "id": "param2",
           "maxclass": "live.dial",
           "patching_rect": [
@@ -436,8 +208,8 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            105,
-            85,
+            220,
+            28,
             52,
             52
           ],
@@ -472,26 +244,6 @@
       },
       {
         "box": {
-          "id": "label3",
-          "maxclass": "comment",
-          "patching_rect": [
-            205,
-            145,
-            80,
-            30
-          ],
-          "text": "Decay",
-          "presentation": 1,
-          "presentation_rect": [
-            205,
-            145,
-            80,
-            30
-          ]
-        }
-      },
-      {
-        "box": {
           "id": "param3",
           "maxclass": "live.dial",
           "patching_rect": [
@@ -502,8 +254,8 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            205,
-            85,
+            322,
+            28,
             52,
             52
           ],
@@ -538,26 +290,6 @@
       },
       {
         "box": {
-          "id": "label4",
-          "maxclass": "comment",
-          "patching_rect": [
-            290,
-            145,
-            80,
-            30
-          ],
-          "text": "Gate Time",
-          "presentation": 1,
-          "presentation_rect": [
-            290,
-            145,
-            80,
-            30
-          ]
-        }
-      },
-      {
-        "box": {
           "id": "param4",
           "maxclass": "live.dial",
           "patching_rect": [
@@ -568,8 +300,8 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            290,
-            85,
+            424,
+            28,
             52,
             52
           ],
@@ -604,26 +336,6 @@
       },
       {
         "box": {
-          "id": "label5",
-          "maxclass": "comment",
-          "patching_rect": [
-            375,
-            145,
-            80,
-            30
-          ],
-          "text": "Attack",
-          "presentation": 1,
-          "presentation_rect": [
-            375,
-            145,
-            80,
-            30
-          ]
-        }
-      },
-      {
-        "box": {
           "id": "param5",
           "maxclass": "live.dial",
           "patching_rect": [
@@ -634,8 +346,8 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            375,
-            85,
+            526,
+            28,
             52,
             52
           ],
@@ -670,26 +382,6 @@
       },
       {
         "box": {
-          "id": "label6",
-          "maxclass": "comment",
-          "patching_rect": [
-            20,
-            365,
-            80,
-            30
-          ],
-          "text": "Harmonics",
-          "presentation": 1,
-          "presentation_rect": [
-            20,
-            365,
-            80,
-            30
-          ]
-        }
-      },
-      {
-        "box": {
           "id": "param6",
           "maxclass": "live.dial",
           "patching_rect": [
@@ -700,8 +392,8 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            20,
-            305,
+            628,
+            28,
             52,
             52
           ],
@@ -736,26 +428,6 @@
       },
       {
         "box": {
-          "id": "label7",
-          "maxclass": "comment",
-          "patching_rect": [
-            105,
-            365,
-            80,
-            30
-          ],
-          "text": "Pulse",
-          "presentation": 1,
-          "presentation_rect": [
-            105,
-            365,
-            80,
-            30
-          ]
-        }
-      },
-      {
-        "box": {
           "id": "param7",
           "maxclass": "live.dial",
           "patching_rect": [
@@ -766,8 +438,8 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            105,
-            305,
+            730,
+            28,
             52,
             52
           ],
@@ -802,26 +474,6 @@
       },
       {
         "box": {
-          "id": "label8",
-          "maxclass": "comment",
-          "patching_rect": [
-            190,
-            365,
-            80,
-            30
-          ],
-          "text": "Noise",
-          "presentation": 1,
-          "presentation_rect": [
-            190,
-            365,
-            80,
-            30
-          ]
-        }
-      },
-      {
-        "box": {
           "id": "param8",
           "maxclass": "live.dial",
           "patching_rect": [
@@ -832,8 +484,8 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            190,
-            305,
+            16,
+            108,
             52,
             52
           ],
@@ -868,26 +520,6 @@
       },
       {
         "box": {
-          "id": "label9",
-          "maxclass": "comment",
-          "patching_rect": [
-            275,
-            365,
-            80,
-            30
-          ],
-          "text": "Metal Noise",
-          "presentation": 1,
-          "presentation_rect": [
-            275,
-            365,
-            80,
-            30
-          ]
-        }
-      },
-      {
-        "box": {
           "id": "param9",
           "maxclass": "live.dial",
           "patching_rect": [
@@ -898,8 +530,8 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            275,
-            305,
+            118,
+            108,
             52,
             52
           ],
@@ -934,26 +566,6 @@
       },
       {
         "box": {
-          "id": "label10",
-          "maxclass": "comment",
-          "patching_rect": [
-            565,
-            145,
-            80,
-            30
-          ],
-          "text": "EQ",
-          "presentation": 1,
-          "presentation_rect": [
-            565,
-            145,
-            80,
-            30
-          ]
-        }
-      },
-      {
-        "box": {
           "id": "param10",
           "maxclass": "live.dial",
           "patching_rect": [
@@ -964,8 +576,8 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            565,
-            85,
+            220,
+            108,
             52,
             52
           ],
@@ -1000,26 +612,6 @@
       },
       {
         "box": {
-          "id": "label11",
-          "maxclass": "comment",
-          "patching_rect": [
-            650,
-            145,
-            80,
-            30
-          ],
-          "text": "Compression",
-          "presentation": 1,
-          "presentation_rect": [
-            650,
-            145,
-            80,
-            30
-          ]
-        }
-      },
-      {
-        "box": {
           "id": "param11",
           "maxclass": "live.dial",
           "patching_rect": [
@@ -1030,8 +622,8 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            650,
-            85,
+            322,
+            108,
             52,
             52
           ],
@@ -1066,26 +658,6 @@
       },
       {
         "box": {
-          "id": "label12",
-          "maxclass": "comment",
-          "patching_rect": [
-            475,
-            365,
-            80,
-            30
-          ],
-          "text": "LFO Intensity",
-          "presentation": 1,
-          "presentation_rect": [
-            475,
-            365,
-            80,
-            30
-          ]
-        }
-      },
-      {
-        "box": {
           "id": "param12",
           "maxclass": "live.dial",
           "patching_rect": [
@@ -1096,8 +668,8 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            475,
-            305,
+            424,
+            108,
             52,
             52
           ],
@@ -1132,26 +704,6 @@
       },
       {
         "box": {
-          "id": "label13",
-          "maxclass": "comment",
-          "patching_rect": [
-            560,
-            365,
-            80,
-            30
-          ],
-          "text": "LFO Rate",
-          "presentation": 1,
-          "presentation_rect": [
-            560,
-            365,
-            80,
-            30
-          ]
-        }
-      },
-      {
-        "box": {
           "id": "param13",
           "maxclass": "live.dial",
           "patching_rect": [
@@ -1162,8 +714,8 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            560,
-            305,
+            526,
+            108,
             52,
             52
           ],
@@ -1198,26 +750,6 @@
       },
       {
         "box": {
-          "id": "label14",
-          "maxclass": "comment",
-          "patching_rect": [
-            660,
-            370,
-            95,
-            30
-          ],
-          "text": "LFO Sync",
-          "presentation": 1,
-          "presentation_rect": [
-            660,
-            370,
-            95,
-            30
-          ]
-        }
-      },
-      {
-        "box": {
           "id": "param14",
           "maxclass": "live.toggle",
           "patching_rect": [
@@ -1228,8 +760,8 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            672,
-            310,
+            642,
+            122,
             24,
             24
           ],
@@ -1275,26 +807,6 @@
       },
       {
         "box": {
-          "id": "label15",
-          "maxclass": "comment",
-          "patching_rect": [
-            760,
-            370,
-            95,
-            30
-          ],
-          "text": "LFO One Shot",
-          "presentation": 1,
-          "presentation_rect": [
-            760,
-            370,
-            95,
-            30
-          ]
-        }
-      },
-      {
-        "box": {
           "id": "param15",
           "maxclass": "live.toggle",
           "patching_rect": [
@@ -1305,8 +817,8 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            772,
-            310,
+            744,
+            122,
             24,
             24
           ],
