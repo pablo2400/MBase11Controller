@@ -1193,19 +1193,14 @@
             36,
             62,
             24
-          ]
-        }
-      },
-      {
-        "box": {
-          "id": "randomizePress",
-          "maxclass": "newobj",
-          "text": "sel 1",
-          "patching_rect": [
-            610,
-            210,
-            38,
-            22
+          ],
+          "active": 1,
+          "appearance": 1,
+          "numinlets": 1,
+          "numoutlets": 2,
+          "outlettype": [
+            "",
+            ""
           ]
         }
       },
@@ -2237,47 +2232,11 @@
       {
         "patchline": {
           "source": [
-            "randomizeButton",
-            0
-          ],
-          "destination": [
-            "randomizePress",
-            0
-          ]
-        }
-      },
-      {
-        "patchline": {
-          "source": [
-            "randomizePress",
-            0
-          ],
-          "destination": [
-            "random0",
-            0
-          ]
-        }
-      },
-      {
-        "patchline": {
-          "source": [
             "random0",
             0
           ],
           "destination": [
             "param0",
-            0
-          ]
-        }
-      },
-      {
-        "patchline": {
-          "source": [
-            "randomizePress",
-            0
-          ],
-          "destination": [
-            "random1",
             0
           ]
         }
@@ -2297,35 +2256,11 @@
       {
         "patchline": {
           "source": [
-            "randomizePress",
-            0
-          ],
-          "destination": [
-            "random3",
-            0
-          ]
-        }
-      },
-      {
-        "patchline": {
-          "source": [
             "random3",
             0
           ],
           "destination": [
             "param3",
-            0
-          ]
-        }
-      },
-      {
-        "patchline": {
-          "source": [
-            "randomizePress",
-            0
-          ],
-          "destination": [
-            "random4",
             0
           ]
         }
@@ -2345,35 +2280,11 @@
       {
         "patchline": {
           "source": [
-            "randomizePress",
-            0
-          ],
-          "destination": [
-            "random5",
-            0
-          ]
-        }
-      },
-      {
-        "patchline": {
-          "source": [
             "random5",
             0
           ],
           "destination": [
             "param5",
-            0
-          ]
-        }
-      },
-      {
-        "patchline": {
-          "source": [
-            "randomizePress",
-            0
-          ],
-          "destination": [
-            "random6",
             0
           ]
         }
@@ -2393,35 +2304,11 @@
       {
         "patchline": {
           "source": [
-            "randomizePress",
-            0
-          ],
-          "destination": [
-            "random7",
-            0
-          ]
-        }
-      },
-      {
-        "patchline": {
-          "source": [
             "random7",
             0
           ],
           "destination": [
             "param7",
-            0
-          ]
-        }
-      },
-      {
-        "patchline": {
-          "source": [
-            "randomizePress",
-            0
-          ],
-          "destination": [
-            "random8",
             0
           ]
         }
@@ -2441,35 +2328,11 @@
       {
         "patchline": {
           "source": [
-            "randomizePress",
-            0
-          ],
-          "destination": [
-            "random9",
-            0
-          ]
-        }
-      },
-      {
-        "patchline": {
-          "source": [
             "random9",
             0
           ],
           "destination": [
             "param9",
-            0
-          ]
-        }
-      },
-      {
-        "patchline": {
-          "source": [
-            "randomizePress",
-            0
-          ],
-          "destination": [
-            "random10",
             0
           ]
         }
@@ -2489,35 +2352,11 @@
       {
         "patchline": {
           "source": [
-            "randomizePress",
-            0
-          ],
-          "destination": [
-            "random11",
-            0
-          ]
-        }
-      },
-      {
-        "patchline": {
-          "source": [
             "random11",
             0
           ],
           "destination": [
             "param11",
-            0
-          ]
-        }
-      },
-      {
-        "patchline": {
-          "source": [
-            "randomizePress",
-            0
-          ],
-          "destination": [
-            "random12",
             0
           ]
         }
@@ -2537,35 +2376,11 @@
       {
         "patchline": {
           "source": [
-            "randomizePress",
-            0
-          ],
-          "destination": [
-            "random13",
-            0
-          ]
-        }
-      },
-      {
-        "patchline": {
-          "source": [
             "random13",
             0
           ],
           "destination": [
             "param13",
-            0
-          ]
-        }
-      },
-      {
-        "patchline": {
-          "source": [
-            "randomizePress",
-            0
-          ],
-          "destination": [
-            "random14",
             0
           ]
         }
@@ -2585,11 +2400,11 @@
       {
         "patchline": {
           "source": [
-            "randomizePress",
+            "random15",
             0
           ],
           "destination": [
-            "random15",
+            "param15",
             0
           ]
         }
@@ -2597,11 +2412,179 @@
       {
         "patchline": {
           "source": [
-            "random15",
+            "randomizeButton",
             0
           ],
           "destination": [
-            "param15",
+            "random0",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "randomizeButton",
+            0
+          ],
+          "destination": [
+            "random1",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "randomizeButton",
+            0
+          ],
+          "destination": [
+            "random3",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "randomizeButton",
+            0
+          ],
+          "destination": [
+            "random4",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "randomizeButton",
+            0
+          ],
+          "destination": [
+            "random5",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "randomizeButton",
+            0
+          ],
+          "destination": [
+            "random6",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "randomizeButton",
+            0
+          ],
+          "destination": [
+            "random7",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "randomizeButton",
+            0
+          ],
+          "destination": [
+            "random8",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "randomizeButton",
+            0
+          ],
+          "destination": [
+            "random9",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "randomizeButton",
+            0
+          ],
+          "destination": [
+            "random10",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "randomizeButton",
+            0
+          ],
+          "destination": [
+            "random11",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "randomizeButton",
+            0
+          ],
+          "destination": [
+            "random12",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "randomizeButton",
+            0
+          ],
+          "destination": [
+            "random13",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "randomizeButton",
+            0
+          ],
+          "destination": [
+            "random14",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "randomizeButton",
+            0
+          ],
+          "destination": [
+            "random15",
             0
           ]
         }
