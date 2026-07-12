@@ -945,7 +945,7 @@
       {
         "box": {
           "id": "program",
-          "maxclass": "live.numbox",
+          "maxclass": "live.dial",
           "parameter_enable": 1,
           "varname": "program_change",
           "patching_rect": [
@@ -956,10 +956,10 @@
           ],
           "presentation": 1,
           "presentation_rect": [
-            550,
+            554,
+            28,
             44,
-            52,
-            22
+            44
           ],
           "saved_attribute_attributes": {
             "valueof": {
@@ -976,45 +976,7 @@
               "parameter_unitstyle": 0
             }
           },
-          "parameter_mappable": 1,
-          "minimum": 0,
-          "maximum": 109,
-          "textcolor": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "activetextcolor": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "bgcolor": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "activebgcolor": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "bordercolor": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "focusbordercolor": [
-            0,
-            0,
-            0,
-            0
-          ]
+          "parameter_mappable": 1
         }
       },
       {
@@ -1032,10 +994,12 @@
           "presentation": 1,
           "presentation_rect": [
             550,
-            44,
+            74,
             52,
-            22
-          ]
+            20
+          ],
+          "ignoreclick": 1,
+          "textjustification": 1
         }
       },
       {
@@ -1053,7 +1017,7 @@
           "presentation": 1,
           "presentation_rect": [
             550,
-            28,
+            10,
             52,
             16
           ]
@@ -1929,30 +1893,6 @@
       {
         "patchline": {
           "source": [
-            "programGateSelector",
-            0
-          ],
-          "destination": [
-            "programGate",
-            1
-          ]
-        }
-      },
-      {
-        "patchline": {
-          "source": [
-            "programTrigger",
-            0
-          ],
-          "destination": [
-            "programGate",
-            0
-          ]
-        }
-      },
-      {
-        "patchline": {
-          "source": [
             "programGate",
             0
           ],
@@ -2055,6 +1995,30 @@
           "destination": [
             "liveBanks",
             0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "programGateSelector",
+            0
+          ],
+          "destination": [
+            "programGate",
+            0
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "source": [
+            "programTrigger",
+            0
+          ],
+          "destination": [
+            "programGate",
+            1
           ]
         }
       }
