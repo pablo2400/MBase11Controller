@@ -1,15 +1,16 @@
 # MBase 11 Controller
 
-JUCE-based VST3/AU/AUv3/Standalone instrument-style controller for the Jomox MBase 11 sound module.
+MIDI controller for the Jomox MBase 11 sound module, provided as a Max for Live MIDI Effect and JUCE-based VST3/AU/AUv3/Standalone builds.
 
 The plugin exposes all main MBase 11 sound controls on one UI and sends MIDI parameter changes to the hardware. State is saved with the plugin session, and menu actions are reserved for patch/SysEx import/export.
 
 ## Status
 
-This is an initial implementation scaffold:
+Current implementation:
 
 - VST3, AU and standalone targets verified locally via JUCE/CMake.
-- The plugin is classified as a silent instrument/synth so Ableton Live can load it in the MIDI track instrument slot.
+- Max for Live MIDI Effect passes incoming notes and MIDI through unchanged and adds the MBase 11 CC messages.
+- The VST3 is classified as a MIDI effect. Host support for MIDI-output VST3 effects varies; use the Max for Live device in Ableton Live.
 - AUv3 is declared in the project formats, but a separate AUv3 artefact was not produced by the local Command Line Tools/Makefiles build. Expect to finish that path with full Xcode or a dedicated app-extension target.
 - One-window editor for the main MBase 11 controls.
 - MIDI CC output path for host MIDI out plus optional direct MIDI output device selection.
@@ -43,7 +44,18 @@ cmake -S . -B build -G Xcode -DMBASE11_FETCH_JUCE=OFF -DCMAKE_PREFIX_PATH=/path/
 
 ## Ableton Live Routing
 
-Use the plugin as an instrument on a MIDI track, then route the track MIDI output to the MIDI port connected to the MBase 11. The standalone build can open a physical MIDI output directly from the top bar.
+Place the devices on one MIDI track in this order:
+
+```text
+MBase 11 Controller (Max MIDI Effect)
+External Instrument
+```
+
+In `External Instrument`, select the physical MIDI output and MBase 11 channel, then select the audio input receiving the module. Set the same MIDI channel in MBase 11 Controller. The controller passes clip notes to `External Instrument` and adds CC automation; `External Instrument` handles hardware MIDI routing, audio return and latency compensation.
+
+The generated device is `MaxForLive/MBase 11 Controller.amxd`. CMake rebuilds it from the editable `.maxpat` source using the local `pack_amxd` utility.
+
+The standalone build continues to open a physical MIDI output directly from its top bar.
 
 ## MIDI Mapping
 

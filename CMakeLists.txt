@@ -5,6 +5,17 @@ project(MBase11Controller VERSION 0.1.0)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+add_executable(pack_amxd tools/pack_amxd.cpp)
+add_custom_command(
+    OUTPUT "${CMAKE_CURRENT_SOURCE_DIR}/MaxForLive/MBase 11 Controller.amxd"
+    COMMAND pack_amxd
+        "${CMAKE_CURRENT_SOURCE_DIR}/MaxForLive/MBase 11 Controller.maxpat"
+        "${CMAKE_CURRENT_SOURCE_DIR}/MaxForLive/MBase 11 Controller.amxd"
+    DEPENDS pack_amxd "${CMAKE_CURRENT_SOURCE_DIR}/MaxForLive/MBase 11 Controller.maxpat"
+    VERBATIM)
+add_custom_target(MBase11Controller_MaxForLive ALL
+    DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/MaxForLive/MBase 11 Controller.amxd")
+
 option(MBASE11_FETCH_JUCE "Download JUCE with CMake FetchContent" ON)
 set(MBASE11_JUCE_GIT_TAG "8.0.8" CACHE STRING "JUCE git tag to use when fetching")
 
@@ -27,10 +38,10 @@ juce_add_plugin(MBase11Controller
     PLUGIN_CODE Mb11
     FORMATS VST3 AU AUv3 Standalone
     PRODUCT_NAME "MBase 11 Controller"
-    IS_SYNTH TRUE
+    IS_SYNTH FALSE
     NEEDS_MIDI_INPUT TRUE
     NEEDS_MIDI_OUTPUT TRUE
-    IS_MIDI_EFFECT FALSE
+    IS_MIDI_EFFECT TRUE
     COPY_PLUGIN_AFTER_BUILD FALSE
 )
 

@@ -2,8 +2,7 @@
 #include "PluginEditor.h"
 
 MBase11ControllerAudioProcessor::MBase11ControllerAudioProcessor()
-    : AudioProcessor(BusesProperties()
-          .withOutput("Output", juce::AudioChannelSet::stereo(), true)),
+    : AudioProcessor(BusesProperties()),
       parameters(*this, nullptr, "MBase11State", mbase11::createParameterLayout())
 {
     for (const auto& spec : mbase11::getParameterSpecs())
@@ -26,14 +25,12 @@ void MBase11ControllerAudioProcessor::releaseResources() {}
 
 bool MBase11ControllerAudioProcessor::isBusesLayoutSupported(const BusesLayout& layouts) const
 {
-    const auto output = layouts.getMainOutputChannelSet();
-    return output == juce::AudioChannelSet::stereo() || output == juce::AudioChannelSet::mono();
+    return layouts.getMainInputChannelSet().isDisabled()
+        && layouts.getMainOutputChannelSet().isDisabled();
 }
 
 void MBase11ControllerAudioProcessor::processBlock(juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiMessages)
 {
-    buffer.clear();
-
     const auto numSamples = buffer.getNumSamples();
     schedulePendingNoteOffs(numSamples);
 

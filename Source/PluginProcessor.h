@@ -22,7 +22,7 @@ public:
     const juce::String getName() const override { return "MBase 11 Controller"; }
     bool acceptsMidi() const override { return true; }
     bool producesMidi() const override { return true; }
-    bool isMidiEffect() const override { return false; }
+    bool isMidiEffect() const override { return true; }
     double getTailLengthSeconds() const override { return 0.0; }
 
     int getNumPrograms() override { return 1; }
